@@ -5,12 +5,12 @@ CC=gcc
 LDFLAGS=-lm
 CFLAGS=-lsqlite3
 
-OBJS=c-serial.o
+OBJS=terminal-code.o
 
-all: c-serial.o
+all: terminal-code.o
 
-c-serial.o: c-serial.c c-serial-calcs.h db.h
-	$(CC) $(CFLAGS) -c c-serial.c
+terminal-code.o: terminal-code.c terminal-code.h db.h
+	$(CC) $(CFLAGS) -c terminal-code.c
 
 build: $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
@@ -18,4 +18,4 @@ build: $(OBJS)
 
 clean:
 	# delete all compiled files
-	rm -f c-serial.o
+	rm -f terminal-code.o
