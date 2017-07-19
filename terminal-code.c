@@ -10,7 +10,7 @@
 #include <string.h>
 #include <termios.h>
 #include <stdint.h>
-#include "c-serial-calcs.h"
+#include "terminal-code.h"
 #include "db.h"
 int init_tty(int fd);
 
